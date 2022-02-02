@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     private InterfaceGameOver interfaceGameOver;
     private ControleDeDificuldade controleDeDificuldade;
 
-    private void Start()
+    protected virtual void Start()
     {
         aviao = GameObject.FindObjectOfType<ControlaAviao>(); //Pegar objeto avio(Jogador)
         pontuacao = GameObject.FindObjectOfType<Pontuacao>(); //Pegar script de pontuacao
@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
         controleDeDificuldade.ReniciarDifuculdade();
     }
 
-    public void ReniciarJogo()
+    public virtual void ReniciarJogo()
     {
         interfaceGameOver.MostrarInterface(false);
         aviao.Reniciar();

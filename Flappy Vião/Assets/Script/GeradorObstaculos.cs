@@ -47,8 +47,7 @@ public class GeradorObstaculos : MonoBehaviour
         }
     }
 
-    public void Parar()
-    {
-        parado = true;
-    }
+    public void Parar() => parado = true;
+
+    public void Ativar() => parado = false;
 }
